@@ -1,10 +1,12 @@
 class Circle {
-  constructor(radius) {
+  constructor(center, radius) {
+    this.center = center;
     this.radius = radius;
   }
 
   equals(otherCircle) {
     return otherCircle instanceof Circle &&
+      this.center.equals(otherCircle.center) &&
       this.radius === otherCircle.radius;
   }
 
